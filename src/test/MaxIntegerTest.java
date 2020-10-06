@@ -44,18 +44,4 @@ public class MaxIntegerTest {
     public void MaxAt3stPositionFloat() {
         Assert.assertEquals(new Float(5f), max.findMaximumFloat(new Float[] {3f,4f,5f}));
     }
-
-    // String test
-    @Test
-    public void givenMaxString_At1stPosition_ReturnString() {
-        Assert.assertEquals(new String("Mango"), max.findMaximumString(new String[] {"Mango","Banana","Apple"}));
-    }
-    @Test
-    public void givenMaxString_At2ndPosition_ReturnString() {
-        Assert.assertEquals(new String("Grapefruit"), max.findMaximumString(new String[] {"Cherries","Grapefruit","Apple"}));
-    }
-    @Test
-    public void givenMaxString_At3rdPosition_ReturnString() {
-        Assert.assertEquals(new String("Kiwi"), max.findMaximumString(new String[] {"Cherries","Banana","Kiwi"}));
-    }
 }
