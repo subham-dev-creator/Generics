@@ -1,8 +1,6 @@
 package main.generics;
 
 public class Generics {
-=======
-
     // Generic Function to compute maximum in an Array of 3 ojects
     public <T extends Comparable<T>> T findMaxGeneric(T[] array) {
         T maxInt = array[0];
@@ -13,6 +11,4 @@ public class Generics {
         System.out.println(maxInt);
         return maxInt;
     }
-<<<<<<< HEAD
-
 }
