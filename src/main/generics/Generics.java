@@ -13,7 +13,7 @@ public class Generics {
         return maxInt;
     }
 
-    // Function to find maximum in a String Array
+    // Function to find maximum in a Float Array
     public Float findMaximumFloat(Float[] numbers) {
         Float maxFloat=numbers[0];
         if(numbers[1].compareTo(maxFloat)>0)
@@ -22,5 +22,15 @@ public class Generics {
             maxFloat=numbers[2];
 
         return maxFloat;
+    }
+    // Function to find maximum in a String Array
+    public String findMaximumString(String[] numbers) {
+        String maxString=numbers[0];
+        if(numbers[1].compareTo(maxString)>0)
+            maxString=numbers[1];
+        if(numbers[2].compareTo(maxString)>0)
+            maxString=numbers[2];
+
+        return maxString;
     }
 }
