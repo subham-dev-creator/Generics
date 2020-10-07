@@ -1,14 +1,25 @@
 package main.generics;
 
-public class Generics {
+import java.util.*;
+
+public class Generics<T extends Comparable<T>> {
+    List<T> list = new ArrayList<>();
+
+    public Generics(T... parameters) {
+        for (T t : parameters)
+            this.list.add(t);
+    }
+    public T findMaxGeneric() {
+        return Generics.findMaxGeneric(list);
+    }
+
     // Generic Function to compute maximum in an Array of 3 ojects
-    public <T extends Comparable<T>> T findMaxGeneric(T[] array) {
-        T maxInt = array[0];
-        if (array[1].compareTo(maxInt) > 0)
-            maxInt = array[1];
-        if (array[2].compareTo(maxInt) > 0)
-            maxInt = array[2];
-        System.out.println(maxInt);
-        return maxInt;
+    public static <T extends Comparable<T>> T findMaxGeneric(List<T> list) {
+        try{
+           return (T) Collections.max(list);
+        }
+        catch (NoSuchElementException e){
+            return null;
+        }
     }
 }
